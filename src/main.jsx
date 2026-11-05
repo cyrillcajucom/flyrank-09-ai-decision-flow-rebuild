@@ -14,6 +14,7 @@ function App(){
   const [nodes,setNodes,onNodesChange]=useNodesState(draft()?.nodes||initial),[edges,setEdges,onEdgesChange]=useEdgesState(draft()?.edges||firstEdges);
   const [selected,setSelected]=useState('start'),[branch,setBranch]=useState('YES'),[input,setInput]=useState('I need help with my account.'),[run,setRun]=useState(null),[message,setMessage]=useState('');
   const [flow,setFlow]=useState(null);
+  useEffect(()=>{const resize=()=>setTimeout(()=>flow?.fitView({padding:.2}),120);window.addEventListener('resize',resize);return()=>window.removeEventListener('resize',resize)},[flow]);
   const selectedNode=nodes.find(n=>n.id===selected);
   useEffect(()=>{localStorage.setItem('decision-flow-draft',JSON.stringify({nodes,edges}))},[nodes,edges]);
   const connect=useCallback(params=>{if(edges.some(e=>e.source===params.source&&e.label===branch)){setMessage('This decision already has a '+branch+' connection. Delete it before reconnecting.');return}setEdges(es=>addEdge({...params,label:branch,animated:true},es))},[branch,edges,setEdges]);
