@@ -1,0 +1,38 @@
+[
+  {
+    "expected_branch": "YES",
+    "run_id": "76cc0691-29eb-4f87-991e-39196587aa1e",
+    "status": "done",
+    "log": [
+      {
+        "node": "start",
+        "prompt": "Does the input contain the word SUPPORT?",
+        "answer": "YES"
+      },
+      {
+        "node": "yes",
+        "prompt": "Does the input contain the word SUPPORT?",
+        "answer": "YES"
+      }
+    ],
+    "active": null
+  },
+  {
+    "expected_branch": "NO",
+    "run_id": "ce5dcb7f-0132-4819-944f-d9cb69fa8b46",
+    "status": "done",
+    "log": [
+      {
+        "node": "start",
+        "prompt": "Does the input contain the word SUPPORT?",
+        "answer": "NO"
+      },
+      {
+        "node": "no",
+        "prompt": "Does the input contain the word SUPPORT?",
+        "answer": "NO"
+      }
+    ],
+    "active": null
+  }
+]
