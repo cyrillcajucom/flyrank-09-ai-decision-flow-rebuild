@@ -1,0 +1,63 @@
+{
+  "nodes": [
+    {
+      "id": "start",
+      "position": {
+        "x": 60,
+        "y": 130
+      },
+      "data": {
+        "label": "Does the input contain the word SUPPORT?",
+        "prompt": "Does the input contain the word SUPPORT?"
+      },
+      "measured": {
+        "width": 200,
+        "height": 62
+      }
+    },
+    {
+      "id": "support",
+      "position": {
+        "x": 410,
+        "y": 30
+      },
+      "data": {
+        "label": "Does the input contain the word SUPPORT?",
+        "prompt": "Does the input contain the word SUPPORT?"
+      },
+      "measured": {
+        "width": 200,
+        "height": 62
+      }
+    },
+    {
+      "id": "sales",
+      "position": {
+        "x": 410,
+        "y": 260
+      },
+      "data": {
+        "label": "Does the input contain the word SUPPORT?",
+        "prompt": "Does the input contain the word SUPPORT?"
+      },
+      "measured": {
+        "width": 200,
+        "height": 62
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "yes",
+      "source": "start",
+      "target": "support",
+      "label": "YES"
+    },
+    {
+      "id": "no",
+      "source": "start",
+      "target": "sales",
+      "label": "NO"
+    }
+  ]
+}
